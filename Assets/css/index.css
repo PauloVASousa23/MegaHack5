@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: cursive;
 }
 
 /*
@@ -77,14 +78,17 @@ nav2>button::after {
   bottom: 0px;
   left: 0px;
 }
-
+*/
 nav3{
-  background-color: #f3f3f3;
+  background-color: #ffffffd6;
   height: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 nav3>img {
@@ -93,23 +97,23 @@ nav3>img {
 }
 
 nav3>button {
-    background-color: transparent;
-    border: none;
-    color: #299f37;
-    font-weight: 700;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-    position: relative;
+  background-color: transparent;
+  border: none;
+  color: #299f37;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
 }
 /*
 nav2>button:hover {
   background-color: #4f8024;
 }
 */
-/*
+
 nav3>button>span {
   position: absolute;
   width: 0%;
@@ -128,17 +132,141 @@ span.active{
   width: 100%;
 }
 
-*/
-
 .topo{
   height: 100vh;
-  background: url('https://s2.best-wallpaper.net/wallpaper/3840x2160/1701/Sunset-mountaineering-person-mountain-silhouette_3840x2160.jpg');
+  background-image: url('/Assets/img/bg1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .conteudo{
   background-color: #fff;
-  height: 100vh;
+  height: 500px;
+  padding: 100px;
+}
+
+.boxTopo{
+  background-color: #ffffffd9;
+  width: 500px;
+  height: 250px;
+  border-radius: 25px;
+  font-size: 2em;
+  font-weight: bolder;
+  box-shadow: 5px 5px 10px 0px rgba(255,255,255,0.7);
+}
+
+.fieldset {
+  text-align: center;
+  border: 1px solid #3ca83d;
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+}
+
+.fieldset h1{
+  position: absolute;
+  top: -25px;
+  left: 32%;
+  width: 35%;
+  background-color: #fff;
+}
+
+.divHr hr{
+  width: 30%;
+  height: 5px;
+  background-color: #3ca83d;
+  margin-bottom: 30px;
+}
+
+.fieldset >button {
+  margin-top: 30px;
+  margin-bottom: -10px;
+  background-color: #3ca83d;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 17px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.fieldset >button:hover{
+  background-color: #194e1c;
+}
+
+.cardsContainer{
+  height: 500px;
+  background-image: url(/Assets/img/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.card{
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.headerCard{
+  height: 35%;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentCard{
+  padding: 20px;
+  text-align: center;
+}
+
+.contentCard > button{
+  width: 100%;
+  background-color: #3ca83d;
+  border: none;
+  color: #fff;
+  margin-top: 15px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  border-bottom: 5px solid #328f33;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contentCard > button:hover {
+  background-color: #379a38;
+}
+
+.contentCard > button:hover:active {
+  background-color: #379a38;
+  border: none;
+  margin-top: 20px;
+}
+
+footer{
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
