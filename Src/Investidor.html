@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Órama</title>
+  <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
+  <script src="/Assets/js/index.js"></script>
+    
+  <link type="text/css" rel="stylesheet" href="/Assets/js/slick-1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Assets/js/SweetAlert.js"></script>
+  <style>
+    *{
+      margin:0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    /****** MOBILE *******/
+    @media (max-width: 768px){
+
+      .menuDesktop{
+        display: none !important;
+      }
+
+      .collapseMenu {
+        display: flex;
+        flex-direction: column;
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        background-color: #ffffffd9;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: .5s;
+      }
+      
+      .scrollHorizontal{
+        display: flex;    
+        max-height: 282px;
+      }
+
+      .containerSlider{
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      nav {
+        background-color: transparent;
+        height: 70px;
+      }
+
+      nav>img {
+        position: absolute;
+        left: 50px;
+        width: 120px;
+        padding-bottom: 4px;
+      }
+
+      nav > button, nav > div > button {
+        background-color: transparent;
+        color: black;
+        font-weight: 500;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none !important;
+        transition: .3s;
+      }
+
+      nav > button:hover {
+        background-color: #eaeaea;
+      }
+
+      .suaConta {
+        padding: 10px;
+        margin-right: 15px;
+        font-weight: 750;
+        background-color: #fff;
+        transition: .3s;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .suaConta:hover {
+        background-color: #eaeaea;
+      }
+
+      .abraSuaConta {
+        background-color: #2fac66;
+        color: #000;
+        padding: 10px;
+        border-radius: 7px;
+        color: #fff;
+        box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.3);
+        transition: .3s;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    
+      .abraSuaConta:hover{
+        background-color: #639e56;
+      }
+
+      .botoesEntrar {
+      }
+
+      .topo{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .homesuperior{
+        width: 100%;
+        padding: 145px 50px;
+        text-align: center;
+        padding: 0px 10%;
+        margin-top: 100px;
+        padding-bottom: 15px;
+      }
+
+      .botaohomesuperior{
+        background-color: #2fac66;
+        padding: 13px 30px;
+        paddint-top: 10px;
+        border-radius: 7px;
+        color: #fff;
+        border: none;
+        margin-top: 40px;
+        cursor: pointer;
+      }
+
+      .homemeio {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 80px;
+      }
+
+      .homemeio > h1 {
+        padding-top: 100px;
+        font-size: 80px;
+      }
+
+      .homemeio > h6 {
+        padding-top: 20px;
+        font-weight: 700;
+      }
+
+      .homemeio > h5 {
+        padding-bottom: 10px;
+      }
+
+      hr.linhahorizontal{
+          max-width: 79px;
+          border-radius: 10px;
+          border-width: 9px;
+          margin: auto;
+          border-color: #2fac66;
+      }
+
+      hr.linhahorizontalBranca{
+          max-width: 79px;
+          border-radius: 10px;
+          border-width: 9px;
+          margin: auto;
+          border-color: #fff;
+      }
+
+      .containerCard{
+        display: flex;
+        gap: 50px;
+        padding: 0 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      .cartao{
+        padding: 15px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cartao > p {
+        text-align: center;
+      }
+
+      .boldVerde {
+        color: #2fac66;
+        font-weight: 700;
+      }
+
+      .cartao>i {
+        color: #2fac66;
+        font-size: 65px;
+        margin-bottom: 18px;
+      }
+    
+      .containerIdeal {
+        width: 100%;
+        background-color: #2fac66;
+        border-radius: 30px;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 35px 30px;
+        margin-top: 20px;
+      }
+
+      .rodape{
+        background-color: #2fac66;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex-direction: column;
+      }
+
+      .buttonsRodape {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+      }
+
+      .rodape > div > button {
+        background-color: transparent;
+        color: #fff;
+        font-weight: 500;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none !important;
+        transition: .3s;
+      }
+
+      .endereco{
+        margin-top: 20px;
+        width: 100%;
+        padding: 0px 30px;
+      }
+
+      .endereco > p {
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .copyright {
+        background-color: #1f804a;
+        position: relative;
+        height: auto;
+        padding: 10px 0px;
+        color: #fff;
+        z-index: -1;
+      }
+
+      .copyright {
+        background-color: #1f804a;
+        position: relative;
+        height: auto;
+        padding: 10px 0px;
+        color: #fff;
+      }
+
+      .copyright > span {
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+
+      .copyright > p {
+        text-align: center;
+        margin: 0px;
+      }
+
+      #email, #nome {
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 10px;
+        width: 100%;
+      }
+
+      #receberEmail {
+        width: 50px;
+        height: 20px;
+      }
+
+      .containerIdeal > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .selecaoAprender{
+        margin-top: 25px;
+      }
+
+      .linha {
+        width: 100%;
+        display: flex;
+        gap: 0px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .linha>label {
+        background-color: #fff;
+        border: 1px solid #2fac66;
+        padding: 10px 10px;
+        width: 90% !important;
+        border-radius: 8px;
+        margin: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .linha>label:hover {
+        background-color: #ccc;
+        
+      }
+      
+      .linha>label input:checked {
+        background-color: #2fac66;
+      }
+
+      .btnVerde {
+        background-color: #2fac66;
+        border: none;
+        padding: 10px 40px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 700;
+        margin: 50px 0px 80px;
+      }
+
+      .boxActive{
+        background-color: #2fac66 !important;
+        color: #fff;
+      }
+
+      .modalInvestidor{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        padding: 30px 0px;
+        overflow: auto;
+        display: none;
+        opacity: 0;
+        transition: .7s;
+      }
+
+      .containerModal{
+        width: 90%;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      .containerModal > p{
+        margin-bottom: 2px;
+      }
+
+      .containerModal > div {
+        width: 100%;
+        text-align: center;
+      }
+
+      .containerModal > div > img {
+        width: 100%;
+        margin: 20px 0px;
+      }
+
+      .fundoModal{
+        background-color: rgba(0,0,0,0.7);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: -1;
+      } 
+
+      .bgOrama{
+        width: 100vw;
+      }
+    }
+    /****** DESKTOP *******/
+    @media screen and (min-width: 768px){
+
+      .menuMobile{
+        display: none !important;
+      }
+
+      .scrollHorizontal{
+        display: flex;    
+        max-height: 282px;
+      }
+
+      .containerSlider{
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      nav {
+        background-color: transparent;
+        height: 70px;
+      }
+
+      nav>img {
+        position: absolute;
+        left: 50px;
+        width: 120px;
+        padding-bottom: 4px;
+      }
+
+      nav > button, nav > div > button {
+        background-color: transparent;
+        color: black;
+        font-weight: 500;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none !important;
+        transition: .3s;
+      }
+
+      nav > button:hover {
+        background-color: #eaeaea;
+      }
+
+      .suaConta {
+        padding: 10px;
+        margin-right: 15px;
+        font-weight: 750;
+        background-color: #fff;
+        transition: .3s;
+      }
+
+      .suaConta:hover {
+        background-color: #eaeaea;
+      }
+
+      .abraSuaConta {
+        background-color: #2fac66;
+        color: #000;
+        padding: 10px;
+        border-radius: 7px;
+        color: #fff;
+        box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.3);
+        transition: .3s;
+      }
+    
+      .abraSuaConta:hover{
+        background-color: #639e56;
+      }
+
+      .botoesEntrar {
+        right: 40px;
+        position: absolute;
+      }
+
+      .topo{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .homesuperior{
+        width: 100%;
+        padding: 145px 50px;
+        text-align: center;
+        padding: 0px 30%; 
+        margin-top: 150px;
+            padding-bottom: 15px;
+
+      }
+
+      .botaohomesuperior{
+        background-color: #2fac66;
+        padding: 13px 30px;
+        paddint-top: 10px;
+        border-radius: 7px;
+        color: #fff;
+        border: none;
+        margin-top: 40px;
+        cursor: pointer;
+      }
+
+      .homemeio {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 80px;
+      }
+
+      .homemeio > h1 {
+        padding-top: 100px;
+        font-size: 80px;
+      }
+
+      .homemeio > h6 {
+        padding-top: 20px;
+        font-weight: 700;
+      }
+
+      .homemeio > h5 {
+        padding-bottom: 10px;
+      }
+
+      hr.linhahorizontal{
+          max-width: 79px;
+          border-radius: 10px;
+          border-width: 9px;
+          margin: auto;
+          border-color: #2fac66;
+      }
+
+      hr.linhahorizontalBranca{
+          max-width: 79px;
+          border-radius: 10px;
+          border-width: 9px;
+          margin: auto;
+          border-color: #fff;
+      }
+
+      .containerCard{
+        display: flex;
+        gap: 50px;
+        padding: 0 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      .cartao{
+        padding: 15px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cartao > p {
+        text-align: center;
+      }
+
+      .boldVerde {
+        color: #2fac66;
+        font-weight: 700;
+      }
+
+      .cartao>i {
+        color: #2fac66;
+        font-size: 65px;
+        margin-bottom: 18px;
+      }
+    
+      .containerIdeal {
+        width: 100%;
+        background-color: #2fac66;
+        border-radius: 30px;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 35px 0px;
+        margin-top: 20px;
+      }
+
+      .rodape{
+        background-color: #2fac66;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .rodape > div > button {
+        background-color: transparent;
+        color: #fff;
+        font-weight: 500;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none !important;
+        transition: .3s;
+      }
+
+      .endereco > p {
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .copyright {
+        background-color: #1f804a;
+        position: relative;
+        height: auto;
+        padding: 10px 0px;
+        color: #fff;
+        z-index: -1;
+      }
+
+      .copyright > span {
+        position: absolute;
+        left: 60px;
+      }
+
+      .copyright > p {
+        text-align: center;
+        margin: 0px;
+      }
+
+      #email, #nome {
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 10px;
+        width: 550px;
+      }
+
+      #receberEmail {
+        width: 50px;
+        height: 20px;
+      }
+
+      .containerIdeal > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .selecaoAprender{
+        margin-top: 25px;
+      }
+
+      .linha {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+      }
+
+      .linha>label {
+        background-color: #fff;
+        border: 1px solid #2fac66;
+        padding: 10px 10px;
+        width: 16%;
+        border-radius: 8px;
+        margin: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .linha>label:hover {
+        background-color: #ccc;
+        
+      }
+      
+      .linha>label input:checked {
+        background-color: #2fac66;
+      }
+
+      .btnVerde {
+        background-color: #2fac66;
+        border: none;
+        padding: 10px 40px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 700;
+        margin: 50px 0px 80px;
+      }
+
+      .boxActive{
+        background-color: #2fac66 !important;
+        color: #fff;
+      }
+
+      .modalInvestidor{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        padding: 30px 0px;
+        overflow: auto;
+        display: none;
+        opacity: 0;
+        transition: .7s;
+      }
+
+      .containerModal{
+        width: 50%;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      .containerModal > p{
+        margin-bottom: 2px;
+      }
+
+      .containerModal > div {
+        width: 100%;
+        text-align: center;
+      }
+
+      .containerModal > div > img {
+        width: 100%;
+        margin: 20px 0px;
+      }
+
+      .fundoModal{
+        background-color: rgba(0,0,0,0.7);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<img class="bgOrama" src="/Assets/img/bgs/asset-home1.png" style="position: absolute;height: 200px;"/>
+
+<nav class="menuMobile center">
+  <img src="https://www.tradergrafico.com.br/trader/images/site-orama.png" onclick="navegaHome()"/>
+  <button onclick="abrirMenu()" style="position: absolute;right: 20px;font-size: 24px;width: 60px;height: 50px;padding: 0;"><i class="fas fa-bars"></i></button>
+  <div class="collapseMenu">
+    <button>Conheça a Órama</button>
+    <button>Comece a Investir</button>
+    <button id="btnGuru1">Órama.guru</button>
+    <button>Contato</button>
+    <div class="botoesEntrar">
+      <button class="suaConta">Login</button>
+      <button class="abraSuaConta">Abra sua conta</button>
+      </div>
+  <div>
+</nav>
+
+<nav class="menuDesktop center">
+  <img src="https://www.tradergrafico.com.br/trader/images/site-orama.png" onclick="navegaHome()"/>
+  <button>Conheça a Órama</button>
+  <button>Comece a Investir</button>
+  <button id="btnGuru2">Órama.guru</button>
+  <button>Contato</button>
+  <div class="botoesEntrar">
+    <button class="suaConta">Login</button>
+    <button class="abraSuaConta">Abra sua conta</button>
+  <div>
+</nav>
+
+
+<div class="homesuperior">
+  <h1><strong class="boldVerde">Olá!</strong> Nós somos a Órama.Guru</h1>
+  <p>Estamos aqui para te ajudar a <strong>aprender tudo sobre invesitmentos.</strong><br/>
+  Vamos te guiar passo a passo nesse seu novo aprendizado.</p>
+
+  <p>Só precisamos que você nos mostre seus <strong>principais interesses</strong>, que iremos encontrar os conteúdos perfeitos para o seu perfil, ok?<br/>
+
+</div>
+
+<div class="containerIdeal" style="border-radius: 0px;padding-bottom: 10px;">
+  <h3>Qual é seu nome? <span style="color: #FF7676;">*</span></h3>
+  <h5> Conta pra gente como você gosta de ser chamado </h5>
+  <input type="text" id="nome" placeholder="Escreva seu nome aqui"/>
+  <hr style="width: 80%; background-color: #fff"/>
+</div>
+<div class="containerIdeal" style="border-radius: 0px;margin-top: 0px;padding-top: 0px;">
+  <h3>Qual é o seu email? <span style="color: #FF7676;">*</span> </h3>
+  <input type="text" id="email" placeholder="Escreva seu e-mail aqui"/>
+  <label><input type="checkbox" id="receberEmail"/>Desejo receber os conteúdos da Órama</label>
+</div>
+
+
+
+<h5 style="margin-top: 80px;text-align: center"><strong>Qual da opções combina mais com você?</strong></h5>
+<p style="text-align:center;">Selecione pelo menos um perfil para continuar</p>
+<hr class="linhahorizontal">
+
+<div class="selecaoAprender" >
+  <div class="linha" >
+    <label style="font-weight: 400; width: 20%;" for="seguranca" id="lblSeguranca">
+      <div> 
+        <strong> Segurança</strong> 
+        <p> Prefiro ter certeza do meu retorno com investimentos  </p>
+      </div>
+    </label>
+    <label style="font-weight: 400; width: 20%;" for="novasexp" id="lblExpeNovas">
+      <div> 
+        <strong> Novas experiências</strong> 
+        <p> Quero explorar novos tipos de investimentos e conteúdos sobre o mercado financeiro </p>
+      </div>
+    </label>
+    <label style="font-weight: 400; width: 20%;" for="diversificacao" id="lblDiversificacao">
+      <div> 
+        <strong> Diversificação</strong> 
+        <p> Quero distribuir meus investimentos e aumentar meus lucros de forma mais ousada
+        </p>
+      </div>
+    </label>
+    
+  </div>
+
+  <input type="checkbox" id="seguranca" hidden/>
+  <input type="checkbox" id="novasexp" hidden/>
+  <input type="checkbox" id="diversificacao" hidden/>
+
+</div>
+
+<h5 style="margin-top: 80px;text-align: center"><strong>Escolha o que você quer aprender</strong></h5>
+<p style="text-align:center;">Selecione pelo menos um tema para continuar</p>
+<hr class="linhahorizontal">
+
+<div class="selecaoAprender">
+  <div class="linha">
+    <label for="comecarInvestir" id="lblComecarInvestir"><div>COMEÇAR A INVESTIR</div></label>
+    <label for="tesouroDireto" id="lblTesouroDireto"><div>TESOURO DIRETO</div></label>
+    <label for="fincancasPessoais" id="lblFincancasPessoais"><div>FINANÇAS PESSOAIS</div></label>
+    <label for="rendaVariavel" id="lblRendaVariavel"><div>RENDA VARIÁVEL</div></label>
+  </div>
+  <div class="linha">
+    <label for="mundoTrader" id="lblMundoTrader"><div>MUNDO TRADER</div></label>
+    <label for="economiaAnalise" id="lblEconomiaAnalise"><div>ECONOMIA E ANÁLISE</div></label>
+    <label for="impostosTaxas" id="lblImpostosTaxas"><div>IMPOSTOS E TAXAS</div></label>
+    <label for="bolsaValores" id="lblBolsaValores"><div>BOLSA DE VALORES</div></label>
+  </div>
+  <input type="checkbox" id="comecarInvestir" hidden/>
+  <input type="checkbox" id="tesouroDireto" hidden/>
+  <input type="checkbox" id="fincancasPessoais" hidden/>
+  <input type="checkbox" id="rendaVariavel" hidden/>
+  <input type="checkbox" id="mundoTrader" hidden/>
+  <input type="checkbox" id="economiaAnalise" hidden/>
+  <input type="checkbox" id="impostosTaxas" hidden/>
+  <input type="checkbox" id="bolsaValores" hidden/>
+</div>
+
+<h5 style="margin-top: 80px;text-align: center"><strong>Quais conteúdos você gosta</strong></h5>
+<p style="text-align:center;">Selecione pelo menos um tema para continuar</p>
+<hr class="linhahorizontal">
+
+<div class="selecaoAprender">
+  <div class="linha">
+    <label for="esporte" id="lblEsporte"><div>ESPORTES</div></label>
+    <label for="cultura" id="lblCultura"><div>CULTURA</div></label>
+    <label for="tecnologia" id="lblTecnologia"><div>TECNOLOGIA</div></label>
+    <label for="saude" id="lblSaude"><div>SAÚDE</div></label>
+  </div>
+  <div class="linha">
+    <label for="mundo" id="lblMundo"><div>MUNDO</div></label>
+    <label for="economia" id="lblEconomia"><div>ECONOMIA</div></label>
+    <label for="politica" id="lblPolitica"><div>POLÍTICA</div></label>
+    <label for="games" id="lblGames"><div>GAMES</div></label>
+  </div>
+  <input type="checkbox" id="esporte" hidden/>
+  <input type="checkbox" id="cultura" hidden/>
+  <input type="checkbox" id="tecnologia" hidden/>
+  <input type="checkbox" id="saude" hidden/>
+  <input type="checkbox" id="mundo" hidden/>
+  <input type="checkbox" id="economia" hidden/>
+  <input type="checkbox" id="politica" hidden/>
+  <input type="checkbox" id="games" hidden/>
+</div>
+
+<div class="center">
+  <button class="btnVerde" id="btnContinuar" style="cursor: pointer;">CONTINUAR</button>
+</div>
+
+<div class="modalInvestidor center">
+  <div class="fundoModal"></div>
+  <div class="containerModal">
+    <h4>Olá, <span id="nomeInvestidor"></span>. </h4>
+    <h4 style="margin-bottom: 10px">Você tem o perfil<br><br></h4> 
+    <h2><span class="boldVerde" id="perfilInvestidor">CONSERVADOR</span></h2>
+    <div>
+      <img src="/Assets/img/1/01.png" id="imagemPerfil"/>
+    </div>
+    <div id="textoPerfil">
+      <p>Se você não gosta de correr riscos, prefere saber direitinho onde está pisando:<p/>
+      <p>Você é o <strong>investidor conservador</strong>! <p/>
+      <p>Quer entender melhor esse perfil? Dá o play!<p/>
+    </div>
+    <button class="btnVerde" id="btnSaberMais" style="cursor: pointer;margin: 20px 0px 0px 0px;">QUERO SABER MAIS</button>
+  </div>
+</div>
+
+<div class="rodape">
+  <img style="width: 220px;
+    padding-left: 9px;" src="https://www.orama.com.br/static/img/landing-miura/logo-orama-g.png"/>
+  <div class="buttonsRodape">
+    <button>Conheça a Órama</button>
+    <button>Comece a Investir</button>
+    <button id="btnGuru">Órama.guru</button>
+    <button>Contato</button>
+  </div>
+  <div class="endereco">
+    <p><strong>Onde estamos</strong></p>
+    <p>Praia de Botafogo, 228 - 18°</p>
+    <p>CEP: 22250-906</p>
+    <p>Rio de janeiro - RJ - Brasil</p>
+  </div>
+</div>
+<div class="copyright">
+  <span>© 2020 Guru. All rights reserved.</span>
+  <p>Feito com amor pela <strong>.Guru</strong>
+</div>
+<script src="https://kit.fontawesome.com/f38600d786.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  function navegaHome(){
+    window.location='/'
+  }
+  let $seguranca = $("#seguranca");
+  let $novasexperiencias = $("#novasexp");
+  let $diversificacao = $("#diversificacao");
+  let $comecarInvestir = $("#comecarInvestir");
+  let $tesouroDireto = $("#tesouroDireto");
+  let $fincancasPessoais = $("#fincancasPessoais");
+  let $rendaVariavel = $("#rendaVariavel");
+  let $mundoTrader = $("#mundoTrader");
+  let $economiaAnalise = $("#economiaAnalise");
+  let $impostosTaxas = $("#impostosTaxas");
+  let $bolsaValores = $("#bolsaValores");
+  let $esporte = $("#esporte");
+  let $cultura = $("#cultura");
+  let $tecnologia = $("#tecnologia");
+  let $saude = $("#saude");
+  let $mundo = $("#mundo");
+  let $economia = $("#economia");
+  let $politica = $("#politica");
+  let $games = $("#games");
+
+  $seguranca.click(function(){
+    $("#lblSeguranca").toggleClass("boxActive");
+    $("#lblExpeNovas").removeClass("boxActive");
+    $("#lblDiversificacao").removeClass("boxActive");
+
+    $("#seguranca").prop("checked", true);
+    $("#novasexp").prop("checked", false);
+    $("#diversificacao").prop("checked", false);
+  });
+
+  $novasexperiencias.click(function(){
+    $("#lblSeguranca").removeClass("boxActive");
+    $("#lblExpeNovas").toggleClass("boxActive");
+    $("#lblDiversificacao").removeClass("boxActive");
+
+    $("#seguranca").prop("checked", false);
+    $("#novasexp").prop("checked", true);
+    $("#diversificacao").prop("checked", false);
+  });
+
+  $diversificacao.click(function(){
+    $("#lblSeguranca").removeClass("boxActive");
+    $("#lblExpeNovas").removeClass("boxActive");
+    $("#lblDiversificacao").toggleClass("boxActive");
+
+    $("#seguranca").prop("checked", false);
+    $("#novasexp").prop("checked", false);
+    $("#diversificacao").prop("checked", true);
+  });
+
+  $comecarInvestir.click(function(){
+    $("#lblComecarInvestir").toggleClass("boxActive");
+  });
+
+  $tesouroDireto.click(function(){
+    $("#lblTesouroDireto").toggleClass("boxActive");
+  });
+
+  $fincancasPessoais.click(function(){
+    $("#lblFincancasPessoais").toggleClass("boxActive");
+  });
+
+  $rendaVariavel.click(function(){
+    $("#lblRendaVariavel").toggleClass("boxActive");
+  });
+
+  $mundoTrader.click(function(){
+    $("#lblMundoTrader").toggleClass("boxActive");
+  });
+
+  $economiaAnalise.click(function(){
+    $("#lblEconomiaAnalise").toggleClass("boxActive");
+  });
+
+  $impostosTaxas.click(function(){
+    $("#lblImpostosTaxas").toggleClass("boxActive");
+  });
+
+  $bolsaValores.click(function(){
+    $("#lblBolsaValores").toggleClass("boxActive");
+  });
+
+  $esporte.click(function(){
+    $("#lblEsporte").toggleClass("boxActive");
+  });
+
+  $cultura.click(function(){
+    $("#lblCultura").toggleClass("boxActive");
+  });
+
+  $tecnologia.click(function(){
+    $("#lblTecnologia").toggleClass("boxActive");
+  });
+
+  $saude.click(function(){
+    $("#lblSaude").toggleClass("boxActive");
+  });
+
+  $mundo.click(function(){
+    $("#lblMundo").toggleClass("boxActive");
+  });
+
+  $economia.click(function(){
+    $("#lblEconomia").toggleClass("boxActive");
+  });
+  
+  $politica.click(function(){
+    $("#lblPolitica").toggleClass("boxActive");
+  });
+  
+  $games.click(function(){
+    $("#lblGames").toggleClass("boxActive");
+  });
+
+  $("#btnContinuar").on("click",function(){
+    let objOpcoes = {
+      "Nome": $("#nome").val(),
+      "Email": $("#email").val(),
+      "Seguranca": $("#seguranca").is(":checked"),
+      "NovasExperiencias": $("#novasexp").is(":checked"),
+      "Diversificacao": $("#diversificacao").is(":checked"),
+      "ComecarInvestir": $("#comecarInvestir").is(":checked"),
+      "TesouroDireto": $("#tesouroDireto").is(":checked"),
+      "FincancasPessoais": $("#fincancasPessoais").is(":checked"),
+      "RendaVariavel": $("#rendaVariavel").is(":checked"),
+      "MundoTrader": $("#mundoTrader").is(":checked"),
+      "EconomiaAnalise": $("#economiaAnalise").is(":checked"),
+      "ImpostosTaxas": $("#impostosTaxas").is(":checked"),
+      "BolsaValores": $("#bolsaValores").is(":checked"),
+      "Esporte": $("#esporte").is(":checked"),
+      "Cultura": $("#cultura").is(":checked"),
+      "Tecnologia": $("#tecnologia").is(":checked"),
+      "Saude": $("#saude").is(":checked"),
+      "Mundo": $("#mundo").is(":checked"),
+      "Economia": $("#economia").is(":checked"),
+      "Politica": $("#politica").is(":checked"),
+      "Games": $("#games").is(":checked")
+    }
+  
+    $("#nomeInvestidor").html(objOpcoes.Nome);
+    if(objOpcoes.Seguranca){
+      $("#perfilInvestidor").html("CONSERVADOR");
+      $("#imagemPerfil").attr("src","/Assets/img/perfil/conservador.png");
+      $("#textoPerfil").html(`
+        <p>Se você não gosta de correr riscos, prefere saber direitinho onde está pisando:<p/>
+        <p>Você é o <strong>investidor conservador</strong>! <p/>
+        <p>Quer entender melhor esse perfil? Dá o play!<p/>
+      `);
+    }else if(objOpcoes.NovasExperiencias){
+      $("#perfilInvestidor").html("MODERADO");
+      $("#imagemPerfil").attr("src","/Assets/img/perfil/moderado.png");
+      $("#textoPerfil").html(`
+        <p>Você combina algumas características do investidor conservador e do arrojado.<p/>
+        <p>É aquele que gosta de segurança, mas também aceita investir em produtos que sofram oscilações de algum tipo.<p/>
+        <p>Isso mesmo: você é o investidor moderado! Aperta o play e vem saber mais sobre o seu perfil!<p/>
+      `);
+
+    }else if(objOpcoes.Diversificacao){
+      $("#perfilInvestidor").html("ARROJADO");
+      $("#imagemPerfil").attr("src","/Assets/img/perfil/arrojado.png");
+      $("#textoPerfil").html(`
+        <p>Você é aquele investidor que tolera riscos altos em nome de uma boa recompensa no final. <p/>
+        <p>Você costuma ter certo conhecimento do mercado e mais facilidade para lidar com possíveis perdas financeiras.<p/>
+        <p>Aperta o play e vem saber mais sobre o investidor arrojado!<p/>
+      `);
+    }
+    
+    let flagLiberadoPerfil = false;
+    let flagLiberadoAprender = false;
+    let flagLiberadoGosta = false;
+
+    if(objOpcoes.Seguranca || objOpcoes.NovasExperiencias || objOpcoes.Diversificacao ){
+      flagLiberadoPerfil = true;
+    }
+
+    if(objOpcoes.ComecarInvestir || objOpcoes.TesouroDireto || objOpcoes.FincancasPessoais || objOpcoes.RendaVariavel || objOpcoes.MundoTrader || objOpcoes.EconomiaAnalise || objOpcoes.ImpostosTaxas || objOpcoes.BolsaValores ){
+      flagLiberadoAprender = true;
+    }
+
+    if(objOpcoes.Esporte || objOpcoes.Cultura || objOpcoes.Tecnologia || objOpcoes.Saude || objOpcoes.Mundo || objOpcoes.Economia || objOpcoes.Politica || objOpcoes.Games ){
+      flagLiberadoGosta = true;
+    }
+
+    if(flagLiberadoPerfil && flagLiberadoAprender && flagLiberadoGosta && objOpcoes.Nome.length > 3 && objOpcoes.Email.length > 8){
+      localStorage.setItem("dados",JSON.stringify(objOpcoes));
+      $(".modalInvestidor").eq(0).css("display","flex");
+      setTimeout(()=>{
+        $(".modalInvestidor").eq(0).css("opacity","1");
+      },100);
+    }
+    
+  });
+
+  $(".fundoModal").eq(0).on("click",function(){
+    $(".modalInvestidor").eq(0).css("opacity","0");
+    setTimeout(()=>{
+      $(".modalInvestidor").eq(0).css("display","none");
+    },700);
+  });
+
+  $("#btnSaberMais").on("click",function(){
+    window.location = "/Src/guru.html";
+  });
+
+  $("#btnGuru1").on("click", function(){
+    window.location = "/Src/Investidor.html";
+  });
+
+  $("#btnGuru2").on("click", function(){
+    window.location = "/Src/Investidor.html";
+  });
+
+  function abrirMenu(){
+    if($(".collapseMenu").eq(0).css("height") == "300px"){
+      $(".collapseMenu").eq(0).css("height","0px")
+    }else{
+      $(".collapseMenu").eq(0).css("height","300px")
+    }
+   
+  }
+</script>
+</body>
+</html>
+
