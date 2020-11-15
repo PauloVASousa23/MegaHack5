@@ -19,9 +19,23 @@
 
     /****** MOBILE *******/
     @media (max-width: 768px){
-
+      
       .menuDesktop{
         display: none !important;
+      }
+      
+      .collapseMenu {
+        display: flex;
+        flex-direction: column;
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        background-color: #ffffffd9;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: .5s;
       }
 
       .scrollHorizontal{
@@ -115,32 +129,25 @@
       }
 
       .homesuperior{
-        width: 80%;
-        padding: 75px 50px;
-      }
-
-      h1{
-        font-size: 23px;
-      }
-
-      .inicialporcento{
+        width: 100%;
+        padding: 0px 20px;
       }
 
       .botaohomesuperior{
         background-color: #2fac66;
-        padding: 13px 20px;
+        padding: 13px 30px;
+        paddint-top: 10px;
         border-radius: 7px;
         color: #fff;
         border: none;
         margin-top: 40px;
         cursor: pointer;
-        height: 50px;
-        width: 210px;
       }
 
       .homemeio {
         width: 100%;
         text-align: center;
+        padding-bottom: 80px;
       }
 
       .homemeio > h1 {
@@ -161,7 +168,6 @@
           max-width: 79px;
           border-radius: 10px;
           border-width: 9px;
-          margin: auto;
           border-color: #2fac66;
       }
 
@@ -181,7 +187,6 @@
         align-items: center;
         margin-top: 40px;
         margin-bottom: 40px;
-        flex-direction: column;
       }
 
       .cartao{
@@ -214,27 +219,12 @@
         border-radius: 30px;
         color: #fff;
         text-align: center;
-        padding: 40px 0px;
-      }
-
-      .containerIdeal > .containerCard > .cartao{
-        border: 1px solid #7fcc6d;
-        border-radius: 25px;
-      }
-
-      .btnDescInvest {
-        background-color: #fff;
-        border: none;
-        padding: 10px 30px;
-        border-radius: 10px;
-        font-weight: 700;
-        margin-top: 30px;
-        cursor: pointer;
-        transition: .4s;
-      }
-
-      .btnDescInvest:hover{
-        opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 35px 0px;
+        margin-top: 80px;
       }
 
       .rodape{
@@ -294,97 +284,110 @@
         text-align: center;
         margin: 0px;
       }
-
-      .slidecontainer {
-        width: 65%;
+      #email {
         text-align: center;
-        margin: auto;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 10px;
+        width: 550px;
+      }
+      #receberEmail {
+        width: 50px;
+        height: 20px;
+      }
+
+      .containerIdeal > label {
         display: flex;
-        flex-direction: column;
-        margin-top: 35px;
-
+        justify-content: center;
+        align-items: center;
       }
 
-      .slider {
-        -webkit-appearance: none;
+      .selecaoAprender{
+        margin-top: 25px;
+      }
+
+      .linha {
         width: 100%;
-        height: 8px;
-        border-radius: 5px;
-        background: #d3d3d3;
-        outline: none;
-        opacity: 0.7;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
       }
 
-      .slider:hover {
-        opacity: 1;
-      }
-
-      .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #2fac66;
+      .linha>label {
+        background-color: #fff;
+        border: 1px solid #2fac66;
+        padding: 10px 10px;
+        width: 16%;
+        border-radius: 8px;
+        margin: 10px;
+        font-weight: 700;
+        font-size: 15px;
         cursor: pointer;
+        text-align: center;
       }
 
-      .slider::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #2fac66;
-        cursor: pointer;
-      }
-
-      .slidecontainer>p {
-        font-size: 63px;
-          min-width: 200px;
-          white-space: nowrap;
-      }
-
-      .botaohomeinferior {
+      #btnContinuar {
         background-color: #2fac66;
-          padding: 13px 30px;
-          paddint-top: 10px;
-          border-radius: 7px;
-          color: #fff;
-          border: none;
-          margin-bottom: 40px;
-          cursor: pointer;
+        border: none;
+        padding: 10px 40px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 700;
+        margin: 50px 0px 80px;
       }
 
-      .ilustracao {
-          height: 160px;
+      .breadCrumb{
+        margin-top: 40px;
       }
 
-  .collapseMenu {
-    display: flex;
-    flex-direction: column;
-    height: 0px;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    background-color: #ffffffd9;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: .5s;
-  }
+      .conteudo {
+        display: flex;
+        padding: 0px 20px;
+        flex-direction: column;
+      }
 
-  .homesuperiorimg{
-        position: absolute;
-    top: 110px;
-    z-index: -1;
-    right: 0px;
-  }
+      .conteudoPrincipal {
+        width: 100%;
+        padding: 0px 0px 20px 0px;
+      }
 
-  .bgOrama{
-    width: 100vw;
-  }
-}
+      .conteudoPrincipal > p {
+        white-space: break-spaces;
+        word-break: break-word;
+      }
+
+      .recomendados {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+
+      .recomendados > div > img {
+        width: 100%;
+      }
+
+      .conteudoPrincipal > img {
+        width: 100%;
+        margin: 15px 0px;
+      }
+
+      .recomendados{
+        font-weight: 600;
+      }
+
+      .videoConteudo{
+        display: none;
+      }
+
+      .videoConteudo > iframe {
+        width: 100%;
+        height: 100%;
+      }      
+
+      .bgOrama{
+        width: 100vw;
+      }
+    }
     /****** DESKTOP *******/
     @media screen and (min-width: 768px){
 
@@ -477,13 +480,9 @@
       }
 
       .homesuperior{
-        width: 50%;
-        padding: 145px 50px;
-        
-      }
-
-      .inicialporcento{
-        display: flex;
+        width: 100%;
+        margin-top: 50px;
+        padding: 0px 80px;
       }
 
       .botaohomesuperior{
@@ -500,6 +499,7 @@
       .homemeio {
         width: 100%;
         text-align: center;
+        padding-bottom: 80px;
       }
 
       .homemeio > h1 {
@@ -520,7 +520,6 @@
           max-width: 79px;
           border-radius: 10px;
           border-width: 9px;
-          margin: auto;
           border-color: #2fac66;
       }
 
@@ -572,27 +571,12 @@
         border-radius: 30px;
         color: #fff;
         text-align: center;
-        padding: 40px 0px;
-      }
-
-      .containerIdeal > .containerCard > .cartao{
-        border: 1px solid #7fcc6d;
-        border-radius: 25px;
-      }
-
-      .btnDescInvest {
-        background-color: #fff;
-        border: none;
-        padding: 10px 30px;
-        border-radius: 10px;
-        font-weight: 700;
-        margin-top: 30px;
-        cursor: pointer;
-        transition: .4s;
-      }
-
-      .btnDescInvest:hover{
-        opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 35px 0px;
+        margin-top: 80px;
       }
 
       .rodape{
@@ -600,8 +584,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-            padding-top: 30px;
-    padding-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
 
       .rodape > div > button {
@@ -639,81 +623,108 @@
         margin: 0px;
       }
 
+      #email {
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 10px;
+        width: 550px;
+      }
+      #receberEmail {
+        width: 50px;
+        height: 20px;
+      }
 
+      .containerIdeal > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
+      .selecaoAprender{
+        margin-top: 25px;
+      }
 
-.slidecontainer {
-  width: 65%;
-  text-align: center;
-    margin: auto;
-    display: flex;
-        padding-bottom: 35px;
+      .linha {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+      }
 
-}
+      .linha>label {
+        background-color: #fff;
+        border: 1px solid #2fac66;
+        padding: 10px 10px;
+        width: 16%;
+        border-radius: 8px;
+        margin: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+      }
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
+      #btnContinuar {
+        background-color: #2fac66;
+        border: none;
+        padding: 10px 40px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 700;
+        margin: 50px 0px 80px;
+      }
 
-.slider:hover {
-  opacity: 1;
-}
+      .breadCrumb{
+        margin-top: 100px;
+      }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #2fac66;
-  cursor: pointer;
-}
+      .conteudo {
+        display: flex;
+        padding: 0px 80px;
+      }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #2fac66;
-  cursor: pointer;
-}
+      .conteudoPrincipal {
+        width: 70%;
+        padding: 0px 50px 20px 0px;
+        border-right: 1px solid #d6d6d6;
+      }
 
-.slidecontainer>p {
-  font-size: 70px;
-  margin-left: 50px;
-  min-width: 200px;
-  white-space: nowrap;
-}
+      .recomendados {
+        width: 30%;
+        padding-left: 30px;
+      }
 
-.botaohomeinferior {
-  background-color: #2fac66;
-    padding: 13px 30px;
-    paddint-top: 10px;
-    border-radius: 7px;
-    color: #fff;
-    border: none;
-    margin-bottom: 40px;
-    cursor: pointer;
-}
+      .recomendados > div > img {
+        width: 100%;
+      }
 
-  .ilustracao{
-    height: 520px; 
-    padding: 50px 90px;
-  }
+      .conteudoPrincipal > img {
+        width: 100%;
+        margin: 15px 0px;
+      }
 
+      .recomendados{
+        font-weight: 600;
+      }
+
+      .videoConteudo{
+        display: none;
+      }
+
+      .videoConteudo > iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      
     }
   </style>
 </head>
 
 <body>
-<img class="bgOrama" src="Assets/img/bgs/asset-home1.png" style="position: absolute;height: 200px;"/>
+<img class="bgOrama" src="/Assets/img/bgs/asset-home1.png" style="position: absolute;height: 200px;"/>
 
 <nav class="menuMobile center">
   <img src="https://www.tradergrafico.com.br/trader/images/site-orama.png" onclick="navegaHome()"/>
@@ -742,75 +753,39 @@
   <div>
 </nav>
 
-<div class="inicialporcento">
-
-  <div class="homesuperior">
-    <p>Um novo jeito de fazer investimento</p>
-    <h1>A <strong class="boldVerde">Órama</strong> é completa para <br>todos os perfis</h1>
-    <a href="../Src/Investidor.html"><button class="botaohomesuperior">QUERO SER ÓRAMA</button></a>
-  </div>
-
-  <div class="homesuperiorimg">
-    <img class="ilustracao" src="Assets/img/home_ilustra.png"/>
-  </div>
-
+<div class="homesuperior">
+  <label class="breadCrumb">Home > Órama.Guru > <span class="boldVerde"> Explicando</span>
+  <label>
 </div>
 
-
-<div class="homemeio">
-  <h5>Veja quanto você pode ganhar com a <strong>Órama</strong></h5>
-  <hr class="linhahorizontal">
-  <h6> Quanto você quer investir?</h6>
-
-  <div class="slidecontainer" >
-    <input style="margin: auto;" type="range" min="100" max="10000" value="1000" class="slider" id="myRange">
-    <p> R$<span id="demo"></span></p>
-  </div>
-
-<br><br>
-
-    
-  <h6> Em quanto tempo você quer resgatar?</h6>
-
-  <div class="slidecontainer" >
-    <input style="margin: auto;" type="range" min="1" max="20" value="1" class="slider" id="myRange2">
-    <p> <span id="demo2"> </span> </p>
-
-  </div>
-  <a href="../Src/Investidor.html"><button class="botaohomeinferior">SIMULAR</button></a>
-</div>
-
-
-
-
-
-<div class="containerIdeal">
-  <h3 style="font-weight: 400">Você <strong>sempre quis investir</strong>,<br> 
-mas <strong>não sabe por onde começar</strong>, né? </h3>
-  <hr class="linhahorizontalBranca">
-  <br/>
-  <h5 style="font-weight: 400"><strong >Descubra seu perfil</strong> de investidor e veja as <strong>melhores</strong> opções para você. </h5>
-  <div class="center">
-    <a href="../Src/Investidor.html"><button class="btnDescInvest">DESCOBRIR</button></a>
-  </div>
-</div>
-
-
-<h5 style="margin-top: 80px;text-align: center">Por que a <strong>Órama</strong></h5>
-<hr class="linhahorizontal">
-<div class="containerCard">
-    <div class="cartao">
-      <i class="fas fa-dollar-sign"></i>
-      <p><span class="boldVerde">Custo zero</span> na abertura e manutenção da conta</p>
+<div class="conteudo">
+  <div class="conteudoPrincipal">
+    <h3><strong id="tituloDetalhes">Descubra como funciona a restituição do seu Imposto de Renda</strong></h3>
+    <div class="videoConteudo" id="videoConteudo">
+      
     </div>
-    <div class="cartao">
-      <i class="fas fa-user-alt"></i>
-      <p><span class="boldVerde">Assessoria e suporte</span> personalizados para você</p>
+    <img src="" id="imgVideo" style="cursor:pointer;"/>
+    <div id="conteudoDetalhe">
+      
     </div>
-    <div class="cartao">
-      <i class="fas fa-star"></i>
-      <p><span class="boldVerde">Conteúdos personalizados</span> de acordo com seu perfil de investimento</p>
+    <button class="btnVerde " id="btnContinuar" style="cursor: pointer; margin: auto;">QUERO INVESTIR</button>
+  </div>
+  <div class="recomendados">
+    <h3>Recomendados</h3>
+    <hr class="linhahorizontal">
+    <div>
+      <img src="/Assets/img/detalhe/detalhe2.png" />
+      <p>Aprenda a invistir no Tesouro Direto</p>
     </div>
+    <div>
+      <img src="/Assets/img/1/03.png" />
+      <p>Como um bom planejamento pode te ajudar com a Previdência Privada</p>
+    </div>
+    <div>
+      <img src="/Assets/img/1/04.png" />
+      <p>Quais são os riscos de investimentos?</p>
+    </div>
+  </div>
 </div>
 
 <div class="rodape">
@@ -837,56 +812,6 @@ mas <strong>não sabe por onde começar</strong>, né? </h3>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-
-  function navegaHome(){
-    window.location='/'
-  }
-
-  function abrirMenu(){
-    if($(".collapseMenu").eq(0).css("height") == "300px"){
-      $(".collapseMenu").eq(0).css("height","0px")
-    }else{
-      $(".collapseMenu").eq(0).css("height","300px")
-    }
-   
-  }
-
-  (()=>{
-    $('.scrollHorizontal').slick({
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 3,
-      adaptiveHeight: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-  })();
-
   $("#btnGuru1").on("click", function(){
     window.location = "/Src/Investidor.html";
   });
@@ -894,43 +819,43 @@ mas <strong>não sabe por onde começar</strong>, né? </h3>
   $("#btnGuru2").on("click", function(){
     window.location = "/Src/Investidor.html";
   });
-      
-const inputRadio = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve({
-      'sim': 'Sim',
-      'nao': 'Não'
-    })
-  }, 1000)
-})
 
-
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("demo2");
-output2.innerHTML = slider2.value;
-
-$("#demo2").html("1 ano");
-
-slider2.oninput = function() {
-  if(this.value > 1){
-    output2.innerHTML = this.value + " anos";
-  }else{
-    output2.innerHTML = this.value + " ano";
+  function navegaHome(){
+    window.location='/'
   }
-  
-}
+  (
+    ()=>{
+      let titulo = localStorage.getItem("titulo");
+      let img = localStorage.getItem("imagem");
+      let video = localStorage.getItem("video");
+      let conteudo = localStorage.getItem("conteudo");
+
+      $("#tituloDetalhes").html(titulo);
+      $("#imgVideo").attr("src",img);
+      $("#videoConteudo").html(`
+        <iframe src="`+ video +`" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video">
+        </iframe>
+      `);
+      $("#conteudoDetalhe").html(conteudo);
+    }
+  )();
 
 
+  $("#imgVideo").on("click",()=>{
+    let altura = document.getElementById("imgVideo").clientHeight;
+
+    $(".videoConteudo").eq(0).css("display","block");
+    $("#imgVideo").css("display","none");
+    $("#video").css("height", altura);
+  });
+
+  function abrirMenu(){
+    if($(".collapseMenu").eq(0).css("height") == "300px"){
+      $(".collapseMenu").eq(0).css("height","0px")
+    }else{
+      $(".collapseMenu").eq(0).css("height","300px")
+    }
+  }
 </script>
 </body>
 </html>
